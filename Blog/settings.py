@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'appblog',
+    
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'Blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'/Users/MarianSanJuan/Desktop/Coderhouse/Python/EntregaFinal-Blog-Cardozo-Torres-SanJuan/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
