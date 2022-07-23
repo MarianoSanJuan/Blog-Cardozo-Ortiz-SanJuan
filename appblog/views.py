@@ -8,16 +8,17 @@ from django.views.generic.list import ListView
 from django.views.generic import DetailView
 from .forms import BusquedaPosteo
 from .models import Posteos
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
 def inicio(request):
     return render(request,"index.html")
 
-class CrearPosteo(CreateView):
+class CrearPosteo(LoginRequiredMixin,CreateView):
     model=Posteos
     template_name = 'posteos/crear_posteo.html'
-    success_url = '/posteos'
+    success_url = '/appblog/posteos'
     fields = ['titulo', 'subtitulo', 'contenido',"autor","fecha_creacion"]
     
 
@@ -42,13 +43,13 @@ class MostrarPosteo(DetailView):
     model = Posteos
     template_name = 'posteos/mostrar_posteo.html'
     
-class EditarPosteo(UpdateView):
+class EditarPosteo(LoginRequiredMixin,UpdateView):
     model=Posteos
     template_name = 'posteos/editar_posteo.html'
-    success_url = '/posteos'
+    success_url = '/appblog/posteos'
     fields = ['titulo', 'subtitulo', 'contenido', 'autor',]
     
-class EliminarPosteo(DeleteView):
+class EliminarPosteo(LoginRequiredMixin,DeleteView):
     model=Posteos
     template_name = 'posteos/eliminar_posteo.html'
-    success_url = '/posteos'
+    success_url = '/appblog/posteos'
