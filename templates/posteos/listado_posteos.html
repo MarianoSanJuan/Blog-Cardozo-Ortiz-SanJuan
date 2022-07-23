@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+{% block titulo %}
+<title>Todos los posteos</title>
+{% endblock titulo %} 
+
+{% block header %} 
+<header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    {% block texto_header %}
+                    <h1>Listado de posteos</h1>
+                    {% endblock texto_header %} 
+                    {% block subtexto_header %}
+                    <span class="subheading">Tenemos más de 5000 posteos</span>
+                    <p>
+                        <a href={% url 'crear_posteo' %}>Crear posteo</a>
+                    </p>
+                    {% endblock subtexto_header %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock header %} 
+
+{% block content%}
+<p>
+    <form action={% url 'listado_posteos' %}>
+        {{form}}
+        <button>Buscar</button>
+    </form>
+</p>
+
+<p>
+    {% if object_list %}
+    <ul>
+        {% for posteo in object_list %}
+        <li>
+            {{posteo}}
+            <a href={% url 'mostrar_posteo' posteo.id %}>Mostrar</a>
+            <a href={% url 'editar_posteo' posteo.id %}>Editar</a>
+            <a href={% url 'eliminar_posteo' posteo.id %}>Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    No se encontraron datos.
+    {% endif %}
+</p>
+{% endblock content %}
+

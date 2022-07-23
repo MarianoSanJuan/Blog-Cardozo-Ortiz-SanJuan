@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<title>Posteo</title>
+{% endblock titulo %}
+
+{% block texto_header %}
+<h1>
+    Posteo
+</h1>
+{% endblock texto_header %}
+
+{% block content %}
+<p>
+    <a href={% url 'listado_posteos' %}>Volver</a>
+</p>
+
+<p>
+    <ul>
+        <li>
+            {{posteos.titulo}}
+        </li>
+        <li>
+            {{posteos.subtitulo}}
+        </li>
+        <li>
+            {{posteos.autor}}
+        </li>
+    </ul>
+</p>
+{% endblock content %}
