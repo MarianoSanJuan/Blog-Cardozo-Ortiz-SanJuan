@@ -5,4 +5,4 @@ cosas y los nombres de los integrantes del grupo.
 Superuser
 user:adminctsj
 marianosanjuan90@gmail.com
-pass:Admin123
+pass:Admin12
