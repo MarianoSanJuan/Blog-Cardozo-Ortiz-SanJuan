@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<title>Register</title>
+<title>Sign up</title>
 {% endblock titulo %}
 
 {% block texto_header %}
 <h1>
-    Registrate
+    Sign Up
 </h1>
 {% endblock texto_header %}
 
 {% block content %}
 <p>
-    <a href={% url 'inicio' %}>Volver</a>
+    <a href={% url 'inicio' %}>Return</a>
 </p>
 <p>
     <form action={% url 'registro' %} method="post">
@@ -20,7 +20,7 @@
         <table>
             {{form.as_table}}
         </table>
-        <button>Registrarse</button>
+        <button>Sign Up</button>
     </form>
 </p>
 {% endblock content %}

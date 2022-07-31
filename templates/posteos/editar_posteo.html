@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<title>Editar Posteo</title>
+<title>Edit Post</title>
 {% endblock titulo %}
 
 {% block texto_header %}
 <h1>
-    Editar Posteo
+    Edit Post
 </h1>
 {% endblock texto_header %}
 
 {% block content %}
 <p>
-    <a href={% url 'listado_posteos' %}>Volver</a>
+    <a href={% url 'listado_posteos' %}>Return</a>
 </p>
 <p>
     <form action={% url 'editar_posteo' posteos.id %} method="post">
@@ -20,7 +20,7 @@
         <table>
             {{form.as_table}}
         </table>
-        <button>Guardar</button>
+        <button>Save</button>
     </form>
 </p>
 {% endblock content %}

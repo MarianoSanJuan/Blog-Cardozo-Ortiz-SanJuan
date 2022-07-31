@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block titulo %}
-<title>Crear posteos</title>
+<title>Create post</title>
 {% endblock titulo %} 
 
 {% block header %} 
@@ -10,10 +10,10 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     {% block texto_header %}
-                    <h1>Crear posteos</h1>
+                    <h1>Create posts</h1>
                     {% endblock texto_header %} 
                     {% block subtexto_header %}
-                    <span class="subheading">Apurate</span>
+                    <span class="subheading">Hurry up</span>
                     {% endblock subtexto_header %}
                 </div>
             </div>
@@ -24,7 +24,7 @@
 
 {% block content%}
 <p>
-    <a href={% url 'listado_posteos' %}>Volver</a>
+    <a href={% url 'listado_posteos' %}>Return</a>
 </p>
 <p>
     <form action={% url 'crear_posteo' %} method="post">
@@ -32,7 +32,7 @@
         <table>
             {{form.as_table}}
         </table>
-        <button>Crear</button>
+        <button>Create</button>
     </form>
 </p>
 {% endblock content %}

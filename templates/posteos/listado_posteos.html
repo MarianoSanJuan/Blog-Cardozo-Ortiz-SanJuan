@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block titulo %}
-<title>Todos los posteos</title>
+<title>All posts</title>
 {% endblock titulo %} 
 
 {% block header %} 
@@ -10,12 +10,12 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     {% block texto_header %}
-                    <h1>Listado de posteos</h1>
+                    <h1>Post's list</h1>
                     {% endblock texto_header %} 
                     {% block subtexto_header %}
-                    <span class="subheading">Tenemos más de 5000 posteos</span>
+                    <span class="subheading">We got more than 5000 posts</span>
                     <p>
-                        <a href={% url 'crear_posteo' %}>Crear posteo</a>
+                        <a href={% url 'crear_posteo' %}>Create post</a>
                     </p>
                     {% endblock subtexto_header %}
                 </div>
@@ -29,7 +29,7 @@
 <p>
     <form action={% url 'listado_posteos' %}>
         {{form}}
-        <button>Buscar</button>
+        <button>Search</button>
     </form>
 </p>
 
@@ -39,14 +39,14 @@
         {% for posteo in object_list %}
         <li>
             {{posteo}}
-            <a href={% url 'mostrar_posteo' posteo.id %}>Mostrar</a>
-            <a href={% url 'editar_posteo' posteo.id %}>Editar</a>
-            <a href={% url 'eliminar_posteo' posteo.id %}>Eliminar</a>
+            <a href={% url 'mostrar_posteo' posteo.id %}>Show</a>
+            <a href={% url 'editar_posteo' posteo.id %}>Edit</a>
+            <a href={% url 'eliminar_posteo' posteo.id %}>Delete</a>
         </li>
         {% endfor %}
     </ul>
     {% else %}
-    No se encontraron datos.
+    No post has been founded
     {% endif %}
 </p>
 {% endblock content %}

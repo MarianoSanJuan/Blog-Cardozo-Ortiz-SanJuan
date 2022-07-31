@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<title>Editar Perfil</title>
+<title>Edit Profile</title>
 {% endblock titulo %}
 
 {% block texto_header %}
 <h1>
-    Editando perfil de {{request.user.username}}
+    Profile update {{request.user.username}}
 </h1>
 {% endblock texto_header %}
 
@@ -17,10 +17,10 @@
         <table>
             {{form.as_table}}
         </table>
-        <button>Editar</button>
+        <button>Edit</button>
     </form>
     <p>
-        <a href={% url 'cambiar_password' %}>Cambiar password</a>
+        <a href={% url 'cambiar_password' %}>Change password</a>
     </p>
 </p>
 {% endblock content %}

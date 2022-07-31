@@ -12,7 +12,7 @@
 
 {% block content %}
 <p>
-    <a href={% url 'inicio' %}>Volver</a>
+    <a href={% url 'inicio' %}>Return</a>
 </p>
 <p>
     <form action={% url 'login' %} method="post">
@@ -20,7 +20,7 @@
         <table>
             {{form.as_table}}
         </table>
-        <button>Loguearse</button>
+        <button>Log out</button>
     </form>
 </p>
 {% endblock content %}
