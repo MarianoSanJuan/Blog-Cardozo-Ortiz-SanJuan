@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block titulo %}
-<title>All posts</title>
+<title>All Posts</title>
 {% endblock titulo %} 
 
 {% block header %} 
@@ -10,10 +10,10 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     {% block texto_header %}
-                    <h1>Post's list</h1>
+                    <h1>List of posts</h1>
                     {% endblock texto_header %} 
                     {% block subtexto_header %}
-                    <span class="subheading">We got more than 5000 posts</span>
+                    <span class="subheading">We have more than 5000 posts</span>
                     <p>
                         <a href={% url 'crear_posteo' %}>Create post</a>
                     </p>
@@ -29,7 +29,7 @@
 <p>
     <form action={% url 'listado_posteos' %}>
         {{form}}
-        <button>Search</button>
+        <button>Searcg</button>
     </form>
 </p>
 
@@ -46,8 +46,7 @@
         {% endfor %}
     </ul>
     {% else %}
-    No post has been founded
+    No posts have been founded
     {% endif %}
 </p>
 {% endblock content %}
-
