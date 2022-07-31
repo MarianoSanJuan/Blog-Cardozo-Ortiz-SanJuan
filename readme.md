@@ -19,4 +19,4 @@ https://www.loom.com/share/223fd98b4b2c4362afb5ec93ddd1cdfb
 Superuser
 user:adminctsj
 marianosanjuan90@gmail.com
-pass:Admin12
+pass:Admin1234567!
