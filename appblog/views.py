@@ -15,6 +15,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 def inicio(request):
     return render(request,"index.html")
 
+def about(request):
+    return render(request, "about.html", {})
+
 class CrearPosteo(LoginRequiredMixin,CreateView):
     model=Posteos
     template_name = 'posteos/crear_posteo.html'

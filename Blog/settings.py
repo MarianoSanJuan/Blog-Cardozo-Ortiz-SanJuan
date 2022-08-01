@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'/Users/MarianSanJuan/Desktop/Coderhouse/Python/EntregaFinal-Blog-Cardozo-Torres-SanJuan/templates'],
+        'DIRS': [r'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

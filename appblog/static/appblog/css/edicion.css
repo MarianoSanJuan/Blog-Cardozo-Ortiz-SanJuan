@@ -1,0 +1,26 @@
+.nombres{
+    margin-left: 15%;
+    
+}
+
+.cuerpo{
+    background-image: url("https://www.solbyte.com/blog/wp-content/uploads/5-etapas-del-proceso-de-desarrollo-de-software.jpg");
+    background-repeat: no-repeat;
+    image-resolution: initial;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contenido{
+    background-image: url("https://st2.depositphotos.com/4676639/46942/v/600/depositphotos_469426060-stock-video-programmer-in-headphones-cancel-noise.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-resolution: initial;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.titulo, .parrafo{
+    color:white;
+    font-family: sans-serif;
+}

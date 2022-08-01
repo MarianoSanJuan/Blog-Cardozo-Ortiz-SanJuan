@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block titulo%}
+<title>Nosotros</title>
+{% endblock titulo%}
+
+{% block texto_header %}
+    <h1>Desarrolladores</h1>
+{% endblock texto_header %}
+
+{% block subtexto_header %}
+    <div class="container nombres">
+        <div class="row row-cols-sm-3">
+            <span class="col-3">
+                <h5>Diego Cardozo</h5>
+            </span>
+            <span class="col-3">
+                <h5>Mariano San Juan</h5>
+            </span>
+        </div>
+    </div>
+{% endblock subtexto_header %}
+
+{% block content %}
+    
+<div class="cuerpo">
+
+    
+    <div class="container">
+        
+        <div class="card">
+            <div class="card-header">
+                <p>Develop</p>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Mariano San juan</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+        </div> <br><br>
+        
+        
+        <div class="card">
+            <div class="card-header">
+                <p>Develop</p>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Diego Cardozo</h5>
+                <p class="card-text">Desarrollador fullstack, proactivo e innovador</p>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    
+</div>
+    {% endblock content %}
