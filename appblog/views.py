@@ -22,7 +22,8 @@ class CrearPosteo(LoginRequiredMixin,CreateView):
     model=Posteos
     template_name = 'posteos/crear_posteo.html'
     success_url = '/appblog/posteos'
-    fields = ['titulo', 'subtitulo', 'contenido',"autor","fecha_creacion"]
+    # prueba image
+    fields = ['titulo', 'subtitulo', 'contenido',"autor","fecha_creacion","image"]
     
 
 class ListadoPosteos(ListView):
@@ -50,7 +51,8 @@ class EditarPosteo(LoginRequiredMixin,UpdateView):
     model=Posteos
     template_name = 'posteos/editar_posteo.html'
     success_url = '/appblog/posteos'
-    fields = ['titulo', 'subtitulo', 'contenido', 'autor',]
+    # prueba image
+    fields = ['titulo', 'subtitulo', 'contenido', 'autor',"image"]
     
 class EliminarPosteo(LoginRequiredMixin,DeleteView):
     model=Posteos
