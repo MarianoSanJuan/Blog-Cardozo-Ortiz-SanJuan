@@ -15,7 +15,8 @@
     <a href={% url 'listado_posteos' %}>Return</a>
 </p>
 <p>
-    <form action={% url 'editar_posteo' posteos.id %} method="post">
+    {% comment %} # prueba imagen {% endcomment %}
+    <form action={% url 'editar_posteo' posteos.id %} method="post" enctype='multipart/form-data'>
         {% csrf_token %}
         <table>
             {{form.as_table}}

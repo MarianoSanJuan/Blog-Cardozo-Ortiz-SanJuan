@@ -28,7 +28,11 @@
         </li>
         {% comment %} prueba image {% endcomment %}
         <li>
-            {{posteos.image}}
+            {% if posteos.image %}
+            <img src={{posteos.image.url}} alt="" height="200px">
+            {% endif %}
+            {% comment %} <img src={{posteos.image.url}} alt="" height="200px"> {% endcomment %}
+            {% comment %} {{posteos.image}} {% endcomment %}
         </li>
 
     </ul>
