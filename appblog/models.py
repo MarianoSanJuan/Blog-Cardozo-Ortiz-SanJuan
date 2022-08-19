@@ -1,5 +1,7 @@
 
 from django.db import models
+from ckeditor.fields import RichTextField
+
 
 # Create your models here.
 
@@ -8,10 +10,9 @@ from django.db import models
 class Posteos(models.Model):
     titulo = models.CharField(max_length=30)
     subtitulo = models.CharField(max_length=50)
-    contenido = models.CharField(max_length=300)
+    contenido = RichTextField(null=True)
     autor = models.CharField(max_length=30)
     fecha_creacion = models.DateField(null=True)
-    #prueba image
     image = models.ImageField(upload_to='imagepost', null=True, blank=True)
     
     def __str__(self):

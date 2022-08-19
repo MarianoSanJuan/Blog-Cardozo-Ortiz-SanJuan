@@ -27,10 +27,10 @@
     <a href={% url 'listado_posteos' %}>Return</a>
 </p>
 <p>
-    {% comment %} # prueba imagen {% endcomment %}
     <form action={% url 'crear_posteo' %} method="post" enctype='multipart/form-data'>
         {% csrf_token %}
         <table>
+            {{form.media}}
             {{form.as_table}}
         </table>
         <button>Create</button>

@@ -26,13 +26,13 @@
         <li>
             {{posteos.autor}}
         </li>
-        {% comment %} prueba image {% endcomment %}
+        <li>
+            {{posteos.contenido | safe}}
+        </li>
         <li>
             {% if posteos.image %}
             <img src={{posteos.image.url}} alt="" height="200px">
             {% endif %}
-            {% comment %} <img src={{posteos.image.url}} alt="" height="200px"> {% endcomment %}
-            {% comment %} {{posteos.image}} {% endcomment %}
         </li>
 
     </ul>
